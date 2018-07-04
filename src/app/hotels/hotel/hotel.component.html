@@ -1,0 +1,32 @@
+<h2 style="color:cornflowerblue">Add a Hotel</h2>
+<form class="hotel-form" #hotelForm="ngForm" (ngSubmit)="onSubmit(hotelForm)">
+<div class="form-row">
+  <div class="form-group col-md-6"> 
+    <input type="text" class="form-control" name="HotelName" #HotelName="ngModel" [(ngModel)]="HotelSvc.selectedHotel.Hotel_Name" placeholder="Hotel Name">
+  </div>
+  <div class="form-group col-md-6">
+    <input type="text" class="form-control" name="Location" #HotelName="ngModel" [(ngModel)]="HotelSvc.selectedHotel.Location"placeholder="Location">
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-4" >
+    <input type="text" class="form-control" name="AvailableRooms" #HotelName="ngModel" [(ngModel)]="HotelSvc.selectedHotel.Available_Room" placeholder="Rooms Available">
+  </div>
+</div>
+<div class="form-row">
+  <div style="box-align: right" class="form-group col-md-12">
+    <input type="text" class="form-control" name="Description" #HotelName="ngModel" [(ngModel)]="HotelSvc.selectedHotel.Description" placeholder="Description">
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <button [disabled]="!hotelForm.valid" type="submit" class="btn btn-lg btn-block btn-info">Submit</button>
+  </div>
+  <div class="form-group col-md-2">
+  </div>
+  <div class="form-group col-md-4">
+    <button style="background-color:rgb(28, 184, 28)" type="button"
+     class="btn btn-lg btn-block btn-secodary" (click)="resetForm(hotelForm)">Reset</button>
+  </div>
+</div>
+</form>

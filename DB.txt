@@ -1,0 +1,37 @@
+USE [Ang_MVC_DB]
+GO
+
+/****** Object:  Table [dbo].[Hotels]    Script Date: 05/07/2018 01:05:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Hotels](
+	[HotelID] [int] IDENTITY(1,1) NOT NULL,
+	[Hotel_Name] [varchar](50) NULL,
+	[Location] [varchar](50) NULL,
+	[Available_Room] [int] NULL,
+	[Description] [varchar](50) NULL,
+ CONSTRAINT [PK_Hotels] PRIMARY KEY CLUSTERED 
+(
+	[HotelID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+HotelID	Hotel_Name	Location	Available_Room	Description
+1	Hotel Swosti Premium	Jaydev Vihar	10	It's a 5 Star Hotel !!
+2	Hotel Trident 	Jaydev Vihar	15	It's a 3 Star Hotel !!
+3	Mayfair Lagoon	Jaydev Vihar	9	It's a 5 Star Hotel !!
+4	Puspak Hotel	Master Canteen	20	It's a 2 Star Hotel !!
+5	Hotel Decent	KIIT Square	11	It's a Night Star Hotel ;) !!
+6	Lal Quila	Khandagiri	5	It's Designer Hotel !!
+7	Highway Inn	Rasulgadh	8	It's nearer to Highway !!
+8	Hotel Sheetal	Acharya Vihar	12	In the Heart of the City !!
+9	Park Inn	Bapuji Nagar	21	It's a 3 Star Hotel !!
+10	Infy ECC	Patia	16	Exclusively for Infocions :) !!
